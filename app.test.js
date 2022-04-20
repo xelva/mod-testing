@@ -1,18 +1,18 @@
 const { forEach, map } = require('./app.js');
 const assert = require('assert');
 
-//helper function
-const test = (desc, fn) => {
+//helper function before Mocha
+/* const test = (desc, fn) => {
     console.log('------', desc);
     try {
         fn();
     } catch (err) {
         console.log(err);
     }
-};
+}; */
 
 //forEach
-test('test the forEach function', () =>{
+it('test the forEach function', () =>{
     let sum = 0;
     forEach([1,2,3], value => {
     sum += value;
@@ -28,7 +28,7 @@ test('test the forEach function', () =>{
 
 
 //map
-test('test the map function', () => {
+it('test the map function', () => {
     const result = map([1,2,3], value => {
         return value * 2
     });
